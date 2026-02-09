@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Harm & Online Safety</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="icon" type="image/png" href="sigma.png">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&display=swap" rel="stylesheet">
+
+<style>
+body{
+  margin:0;
+  font-family:Arial, sans-serif;
+  color:#111;
+  background:linear-gradient(-45deg,#e0e0e0,#cfcfcf,#f5f5f5);
+  background-size:400% 400%;
+  animation:bgMove 15s ease infinite;
+}
+@keyframes bgMove{
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
+
+#enterScreen{
+  position:fixed;
+  inset:0;
+  background:#f2f2f2;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:28px;
+  cursor:pointer;
+  z-index:10;
+}
+
+header{
+  text-align:center;
+  padding:60px 20px 20px;
+}
+header h1{
+  font-family:'Cinzel', serif;
+  font-size:44px;
+}
+
+.controls{
+  display:flex;
+  justify-content:center;
+  gap:10px;
+  flex-wrap:wrap;
+  margin:20px;
+}
+
+button{
+  padding:10px 16px;
+  border:none;
+  border-radius:6px;
+  background:#222;
+  color:#fff;
+  cursor:pointer;
+  font-size:14px;
+}
+
+section{
+  max-width:900px;
+  margin:0 auto;
+  padding:40px 20px;
+}
+
+.card{
+  background:#ffffffee;
+  padding:30px;
+  margin-bottom:40px;
+  border-radius:10px;
+}
+
+.hidden{display:none}
+
+a.safe-link{
+  color:#0a3d91;
+  text-decoration:underline;
+  font-weight:bold;
+}
+
+.small-note{
+  font-size:13px;
+  opacity:.8;
+}
+
+footer{
+  text-align:center;
+  padding:50px 20px;
+  font-size:13px;
+  opacity:.7;
+}
+</style>
+</head>
+
+<body>
+
+<div id="enterScreen">Click to Enter</div>
+
+<audio id="audio" loop>
+  <source src="shmegma.mp3" type="audio/mpeg">
+</audio>
+
+<header>
+  <h1>Harm & Online Safety</h1>
+  <p>Education, awareness, and reporting for harmful online activity</p>
+</header>
+
+<div class="controls">
+  <button onclick="showSection('overview')">Overview</button>
+  <button onclick="showSection('764')">764</button>
+  <button onclick="showSection('harm')">Harm Networks</button>
+  <button onclick="showSection('hostile')">VRChat Groups</button>
+  <button onclick="showSection('coffin')">Laughing Coffin</button>
+  <button onclick="showSection('other')">Other Groups</button>
+  <button onclick="showSection('help')">Get Help / Report</button>
+  <button onclick="showSection('contact')">Contact Us!</button>
+</div>
+
+<section>
+
+<div id="overview" class="card">
+  <h2>Purpose of This Site</h2>
+  <p>
+    Harm & Online Safety is an educational resource explaining how harmful
+    online groups operate, why they are dangerous, and how people can protect
+    themselves and report abuse.
+  </p>
+  <p class="small-note">
+    This site does not promote or endorse any group.
+  </p>
+</div>
+
+<div id="764" class="card hidden">
+  <h2>764-Style Networks</h2>
+  <p>
+    764 is a label used for decentralized online extortion and abuse networks
+    that rely on fear, coercion, and isolation.
+  </p>
+  <p>
+    These networks are disrupted through reporting, arrests, and platform
+    enforcement.
+  </p>
+</div>
+
+<div id="harm" class="card hidden">
+  <h2>Harm-Oriented Online Networks</h2>
+  <p>
+    Harm-focused communities normalize harassment and psychological abuse.
+    They often collapse due to exposure, internal conflict, and moderation.
+  </p>
+</div>
+
+<div id="hostile" class="card hidden">
+  <h2>VRChat – Reported Crasher Groups</h2>
+  <p>
+    Some VRChat groups are reported as engaging in disruptive behavior such as
+    instance crashing and coordinated harassment.
+  </p>
+  <p>
+    These groups lose access through reporting tools and platform enforcement.
+  </p>
+</div>
+
+<div id="coffin" class="card hidden">
+  <h2>Laughing Coffin</h2>
+  <p>
+    Laughing Coffin is described online as a COM-style group and has also been
+    associated with reported crasher activity.
+  </p>
+  <p>
+    Visibility and enforcement significantly limit these groups.
+  </p>
+</div>
+
+<div id="other" class="card hidden">
+  <h2>Other Reported Harmful Groups</h2>
+  <ul>
+    <li>Use of intimidation and fear</li>
+    <li>Anonymity and burner accounts</li>
+    <li>Isolation of targets</li>
+    <li>Encouragement of harmful behavior</li>
+  </ul>
+  <p>
+    These groups frequently fragment or disappear due to exposure.
+  </p>
+</div>
+
+<div id="help" class="card hidden">
+  <h2>Get Help & Report Harmful Activity</h2>
+  <ul>
+    <li>
+      <strong>FBI IC3:</strong><br>
+      <a class="safe-link" href="https://www.ic3.gov" target="_blank" rel="noopener">
+        https://www.ic3.gov
+      </a>
+    </li>
+    <br>
+    <li>
+      <strong>Platform Reporting:</strong><br>
+      Use in-app report tools (Discord, VRChat, etc.)
+    </li>
+    <br>
+    <li>
+      <strong>Immediate Danger:</strong><br>
+      Contact local emergency services.
+    </li>
+  </ul>
+</div>
+
+<div id="contact" class="card hidden">
+  <h2>Contact Us</h2>
+  <p>
+    If you would like us to add something to the website or need help trying to
+    report an extortion case, please reach out.
+  </p>
+  <p>
+    <strong>Email us at:</strong><br>
+    <a class="safe-link" href="mailto:HarmAndOnlineSafety@outlook.com">
+      HarmAndOnlineSafety@outlook.com
+    </a>
+  </p>
+</div>
+
+</section>
+
+<footer>
+  Harm & Online Safety • Education • Prevention • Reporting Awareness
+</footer>
+
+<script>
+window.addEventListener("DOMContentLoaded", () => {
+  const audio = document.getElementById("audio");
+  const enter = document.getElementById("enterScreen");
+
+  audio.volume = 0.2;
+
+  enter.addEventListener("click", () => {
+    enter.style.display = "none";
+    audio.play().catch(()=>{});
+  });
+});
+
+function showSection(id){
+  document.querySelectorAll('.card').forEach(c => c.classList.add('hidden'));
+  document.getElementById(id).classList.remove('hidden');
+}
+</script>
+
+</body>
+</html>
